@@ -1,0 +1,32 @@
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY, name TEXT, age INTEGER);
+
+INSERT INTO famous_people VALUES (1, "J.Cole", 40);
+INSERT INTO famous_people VALUES (2, "Will Ferrell", 57);
+INSERT INTO famous_people VALUES (3, "Jhene Aiko", 37);
+INSERT INTO famous_people VALUES (4, "Sandra Bullock", 67);
+INSERT INTO famous_people VALUES (5, "Kai Cenat", 23);
+
+SELECT * FROM famous_people;
+
+CREATE TABLE occupation (id INTEGER PRIMARY KEY, person_id INTEGER, title TEXT);
+
+INSERT INTO occupation (person_id, title) VALUES (1, "Rapper");
+INSERT INTO occupation (person_id, title) VALUES (2, "Actor");
+INSERT INTO occupation (person_id, title) VALUES (3, "Singer");
+INSERT INTO occupation (person_id, title) VALUES (4, "Actress");
+INSERT INTO occupation (person_id, title) VALUES (5, "Streamer");
+
+CREATE TABLE successful_project (id INTEGER PRIMARY KEY, person1_id INTEGER, project TEXT);
+
+INSERT INTO successful_project (person1_id, project) VALUES (1, "Forest Hill Drive");
+INSERT INTO successful_project (person1_id, project) VALUES (2, "Barbie");
+INSERT INTO successful_project (person1_id, project) VALUES (3, "Chilombo");
+INSERT INTO successful_project (person1_id, project) VALUES (4, "Gravity");
+INSERT INTO successful_project (person1_id, project) VALUES (5, "Streamer University");
+
+SELECT famous_people.name, age, occupation.title, successful_project.project
+FROM famous_people
+JOIN occupation
+ON famous_people.id = occupation.person_id
+JOIN successful_project
+ON famous_people.id = successful_project.person1_id;
