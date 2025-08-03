@@ -1,0 +1,19 @@
+CREATE TABLE store_items(id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, quantity INTEGER, amount_sold INTEGER);
+
+INSERT INTO store_items VALUES(1, "Crop Tops", "Red", 14, 150, 10);
+INSERT INTO store_items VALUES(2, "T_Shirts", "Blue", 18, 165, 34);
+INSERT INTO store_items VALUES(3, "Tank_Top", "Yellow", 10, 100, 2);
+INSERT INTO store_items VALUES(4, "Jean_Pants", "Light", 40, 250, 51);
+INSERT INTO store_items VALUES(5, "Jean_Pants", "Medium", 40, 280, 12);
+INSERT INTO store_items VALUES(6, "Jean_Pants", "Dark", 40, 125, 78);
+INSERT INTO store_items VALUES(7, "Jean_Shorts", "Light", 35, 200, 21);
+INSERT INTO store_items VALUES(8, "Jean_Shorts", "Dark", 35, 125, 34);
+INSERT INTO store_items VALUES(9, "Long Dress", "Orange", 8, 75, 11);
+INSERT INTO store_items VALUES(10, "Short_Dress", "Pink", 8, 75, 16);
+INSERT INTO store_items VALUES(11, "Socks", "White", 5, 500, 149);
+INSERT INTO store_items VALUES(12, "Necklaces", "Gold", 5, 350, 210);
+INSERT INTO store_items VALUES(13, "Necklaces", "Silver", 5, 350, 190);
+INSERT INTO store_items VALUES(14, "Heels", "Clear", 25, 80, 13);
+INSERT INTO store_items VALUES(15, "Flat_Sandals", "Black", 10, 130, 21);
+
+SELECT * FROM store_items;
