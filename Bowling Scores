@@ -1,0 +1,19 @@
+CREATE TABLE scores (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+name TEXT, 
+score INTEGER);
+
+INSERT INTO scores (name, score) VALUES ("Tiana", 180);
+INSERT INTO scores (name, score) VALUES ("Kevin", 183);
+INSERT INTO scores (name, score) VALUES ("Tikki", 169);
+INSERT INTO scores (name, score) VALUES ("Shae", 162);
+INSERT INTO scores (name, score) VALUES ("Tamia", 98);
+
+SELECT * FROM scores;
+
+UPDATE scores SET score = "108" WHERE name = "Tamia";
+
+SELECT * FROM scores;
+
+DELETE FROM scores WHERE id = 2;
+
+SELECT * FROM scores;
